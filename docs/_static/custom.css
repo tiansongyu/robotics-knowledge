@@ -1,10 +1,8 @@
-/* 保留 Read the Docs 主题，仅改善中文阅读和键盘焦点。 */
-body, .rst-content { font-family: Lato, "Noto Sans SC", "Microsoft YaHei", sans-serif; }
-.rst-content p, .rst-content li { line-height: 1.85; }
-.wy-nav-content { max-width: 960px; }
-.rst-content table.docutils td { white-space: normal; }
-a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #b85c00; outline-offset: 3px; }
-
-.catalog-return { margin: -5px 0 14px; }
-.catalog-return a { display: inline-flex; align-items: center; min-height: 44px; gap: .6em; padding: 0 14px; border: 1px solid #beb7a5; border-radius: 5px; background: #f8f3e7; color: #24302d; font-weight: 700; }
-.catalog-return a:hover { background: #f1dfa8; color: #172420; }
+.catalog-return { margin: 28px 0 16px; }
+.catalog-return a {
+  display: inline-flex; align-items: center; gap: .6em; min-height: 44px;
+  padding: 7px 14px; color: var(--mabel-ink); background: var(--mabel-gold);
+  border: 1.5px solid var(--mabel-ink); border-radius: 4px;
+  box-shadow: 2px 2px var(--mabel-ink); font-weight: 700;
+}
+.catalog-return a:hover { color: var(--mabel-ink); background: var(--mabel-bone); }

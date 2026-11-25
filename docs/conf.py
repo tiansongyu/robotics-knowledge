@@ -5,7 +5,8 @@ from pathlib import Path
 project = '机器人知识库'
 language = 'zh_CN'
 extensions = ['sphinx_rtd_theme', 'myst_nb', 'sphinxcontrib.mermaid', 'sphinx.ext.mathjax']
-html_theme = 'sphinx_rtd_theme'
+html_theme_path = ['_themes']
+html_theme = 'mabel_handbook'
 html_title = project
 html_short_title = project
 html_theme_options = {
@@ -30,7 +31,17 @@ nb_execution_raise_on_error = True
 nb_execution_allow_errors = False
 nb_execution_in_temp = True
 mermaid_version = '11.12.2'
-mermaid_init_config = {'startOnLoad': False, 'securityLevel': 'strict', 'theme': 'neutral'}
+mermaid_light_theme = 'base'
+mermaid_dark_theme = 'base'
+mermaid_init_config = {
+    'startOnLoad': False, 'securityLevel': 'strict',
+    'themeVariables': {
+        'primaryColor': '#f4ead2', 'primaryTextColor': '#192328',
+        'primaryBorderColor': '#896d39', 'lineColor': '#46565a',
+        'secondaryColor': '#dbe7e6', 'tertiaryColor': '#fffdf6',
+        'fontFamily': 'Jost, Microsoft YaHei, sans-serif',
+    },
+}
 html_baseurl = 'https://tiansongyu.github.io/robotics-knowledge/'
 mermaid_use_local = 'vendor/mermaid/dist/mermaid.esm.min.mjs'
 mathjax_path = 'vendor/mathjax/es5/tex-mml-chtml.js'

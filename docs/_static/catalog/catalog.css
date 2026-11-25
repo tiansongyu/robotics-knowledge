@@ -1,13 +1,13 @@
 :root {
-  --ink: #1a2529;
-  --paper: #f8f5eb;
-  --bone: #f2ead5;
-  --surface: #fffdf6;
-  --line: #c6c3b7;
-  --muted: #515c5e;
-  --rust: #973d21;
-  --gold: #f3c866;
-  --sans: "Source Sans 3", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ink: var(--mabel-ink);
+  --paper: var(--mabel-paper);
+  --bone: var(--mabel-bone);
+  --surface: var(--mabel-panel);
+  --line: var(--mabel-rule);
+  --muted: var(--mabel-muted);
+  --rust: var(--mabel-rust);
+  --gold: var(--mabel-gold);
+  --sans: var(--mabel-text);
   color: var(--ink);
   background: var(--paper);
   font-family: var(--sans);

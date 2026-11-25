@@ -1,9 +1,6 @@
 {% extends "!layout.html" %}
-{% block content %}
-  <nav class="catalog-return" aria-label="学习导航">
-    <a href="{{ catalog_return }}" title="退出当前学习模块"><span aria-hidden="true">←</span> 返回知识目录</a>
-  </nav>
-  {{ super() }}
+{% block handbook_tools %}
+  <a class="mabel-return" href="{{ catalog_return }}"><span aria-hidden="true">←</span> 返回知识目录</a>
 {% endblock %}
 {% block document %}
   {{ super() }}

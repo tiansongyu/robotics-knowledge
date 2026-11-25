@@ -1,0 +1,29 @@
+{% extends "sphinx_rtd_theme/layout.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <script defer src="{{ pathto('_static/mabel-reader.js', 1) }}"></script>
+{% endblock %}
+{% block extrabody %}
+  {{ super() }}
+  <a class="mabel-skip" href="#mabel-reading">{{ _('Skip to content') }}</a>
+  <header class="mabel-bar">
+    <a class="mabel-brand" href="{{ pathto(root_doc|default(master_doc)) }}">
+      <span class="mabel-emblem" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m3 4 8 2.5v14L3 18zM21 4l-8 2.5v14l8-2.5z"/></svg></span>
+      <span>{{ project|e }}</span>
+    </a>
+    <div class="mabel-tools">
+      {% block handbook_tools %}{% endblock %}
+      <button class="mabel-toggle" type="button" aria-expanded="false" aria-controls="mabel-contents"><span aria-hidden="true">☰</span> {{ '目录' if language == 'zh_CN' else _('Contents') }}</button>
+    </div>
+  </header>
+  <button class="mabel-scrim" type="button" tabindex="-1" aria-label="{{ '关闭目录' if language == 'zh_CN' else _('Close') }}" hidden></button>
+{% endblock %}
+{% block navigation %}
+  <div id="mabel-contents">
+    <p class="mabel-toc-title">{{ '章节目录' if language == 'zh_CN' else _('Contents') }}</p>
+    {{ super() }}
+  </div>
+{% endblock %}
+{% block content %}
+  <div id="mabel-reading" tabindex="-1">{{ super() }}</div>
+{% endblock %}

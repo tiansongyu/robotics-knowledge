@@ -29,7 +29,7 @@ python3 -m venv .venv
 
 打开 http://127.0.0.1:8000/ 。Windows 将 `.venv/bin/python` 换为 `.venv\Scripts\python`。
 
-站点使用 Sphinx、Read the Docs 官方主题、MyST-NB 和 Mermaid。Notebook 在构建时执行；网页不是在线 Python 环境。Mermaid 11.12.2 与 MathJax 3.2.2 从 npm 官方注册表下载到忽略提交的目录，并随 HTML 部署，读者无需访问第三方 CDN。相应许可证随资源保留。下载脚本固定版本，但未做独立供应链完整性审计。
+站点使用 Sphinx、MyST-NB 和 Mermaid。主站与 UMI、Ego 共用 [MABEL 手册主题](docs/_themes/mabel_handbook/theme.toml)。主题随仓库分发，继承 Read the Docs 的章节树、面包屑和上下章导航。首页可筛选模块，课程内的搜索框可查全文。Notebook 在构建时执行；网页不是在线 Python 环境。Mermaid 11.12.2 与 MathJax 3.2.2 从 npm 官方注册表下载到忽略提交的目录，并随 HTML 部署，读者无需访问第三方 CDN。相应许可证随资源保留。下载脚本固定版本，但未做独立供应链完整性审计。
 
 ## 发布与维护
 
