@@ -22,6 +22,7 @@ jobs:
       - run: pip install -r requirements-docs.txt
       - run: python scripts/vendor_assets.py
       - run: python -m sphinx -E -a -W --keep-going -n -D nb_execution_mode=force -b html docs docs/_build/html
+      - run: python scripts/build_tutorials.py
       - run: python scripts/check_links.py
       - uses: actions/upload-pages-artifact@v4
         with:

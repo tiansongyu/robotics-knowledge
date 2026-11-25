@@ -4,6 +4,8 @@ build:
   jobs:
     pre_build:
       - python scripts/vendor_assets.py
+    post_build:
+      - python scripts/build_tutorials.py "$READTHEDOCS_OUTPUT/html"
   tools:
     python: "3.12"
 sphinx:

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" role="img" aria-labelledby="t d">
+<title id="t">教学片段的四个事件帧</title><desc id="d">每秒三十帧。片段第十二帧盖仍闭合，第二十四帧接触、第三十帧盖开始转动，第六十帧稳定打开。</desc>
+<rect width="760" height="250" rx="12" fill="#f0f5f3"/>
+<g font-family="sans-serif" fill="#27434b" font-size="17">
+<text x="28" y="34">盒盖绕左端铰链转动</text>
+<g stroke="#334e58" stroke-width="2.5" fill="#a9c2c1">
+<path d="M42 109h96v32H42zm181 0h96v32h-96zm181 0h96v32h-96zm181 0h96v32h-96z"/>
+</g>
+<g stroke="#aa7943" stroke-width="7" stroke-linecap="round">
+<path d="M42 105h96m85 0h96m85 0 94-12m87 12 48-74"/>
+</g>
+<g fill="#b37757" stroke="#fff" stroke-width="2"><circle cx="146" cy="74" r="7"/><circle cx="318" cy="98" r="7"/><circle cx="500" cy="86" r="7"/><circle cx="637" cy="24" r="7"/></g>
+<path d="M52 171h659m-7-5 7 5-7 5" fill="none" stroke="#738990" stroke-width="2"/>
+<g fill="#186d69"><circle cx="86" cy="171" r="5"/><circle cx="265" cy="171" r="5"/><circle cx="447" cy="171" r="7"/><circle cx="628" cy="171" r="5"/></g>
+<g text-anchor="middle"><text x="86" y="202">PRE · 12</text><text x="265" y="202">CONTACT · 24</text><text x="447" y="202" font-weight="700">PNR · 30</text><text x="628" y="202">POST · 60</text>
+<text x="86" y="228">盖合拢</text><text x="265" y="228">指尖接触</text><text x="447" y="228">盖开始转动</text><text x="628" y="228">盖已打开</text></g>
+</g></svg>

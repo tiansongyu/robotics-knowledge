@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 312" role="img" aria-labelledby="t d">
+<title id="t">同步记录同一次开盒动作的两种视角</title><desc id="d">左侧为佩戴者近距离看到的盒盖和接触它的手指。右侧为固定相机看到的头部、手臂和桌面。</desc>
+<defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#cbd9dc" stroke-width=".7"/></pattern></defs>
+<rect width="760" height="312" rx="12" fill="#f0f4f3"/>
+<g font-family="sans-serif" font-weight="600" fill="#243e48" font-size="18"><text x="24" y="36">Ego　佩戴者视角</text><text x="394" y="36">Exo　固定相机视角</text></g>
+<svg x="22" y="53" width="345" height="197" viewBox="0 0 345 197">
+ <rect width="345" height="197" rx="8" fill="#dae6e5"/>
+ <path d="M0 79 345 53v144H0Z" fill="#c4d6d7"/>
+ <g stroke="#344e55" stroke-linejoin="round" stroke-width="2.5">
+ <path d="m65 82 119-32 83 31-115 45z" fill="#799396"/>
+ <path d="m65 82 87 44v47l-87-42z" fill="#799a9b"/><path d="m152 126 115-45v48l-115 44z" fill="#a5bfc0"/>
+ <path d="m65 82 119-32-1-41L62 42Z" fill="#d9ab6e"/><path d="m71 78 106-28-1-30L71 47Z" fill="#ebc692"/>
+ <path d="m27 197 22-34 5-36q3-11 11-10l15 4 16 15q4 7-3 10l-12-4-7 18 6 37" fill="#d8aa8b"/>
+ <path d="m345 153-45-19-40-39-34-24-33-33q-4-6-10-4-6 4 0 12l23 33-21-10q-8-2-9 4-1 4 6 9l31 21 21 18 20 32 56 44h35" fill="#e0b69c"/>
+ </g>
+</svg>
+<svg x="391" y="53" width="347" height="197" viewBox="0 0 347 197">
+ <rect width="347" height="197" rx="8" fill="#e4edeb"/><rect width="347" height="197" fill="url(#grid)"/>
+ <g stroke-linejoin="round" stroke-linecap="round" stroke="#344e55" stroke-width="2.4">
+ <path d="M15 197v-58q4-36 34-50l13-9 25 4q21 12 29 37l11 76" fill="#62838c"/>
+ <path d="m49 90 5-23-9-16q-3-27 16-40 25-9 40 12l5 23 7 11-8 4-1 13-17 2-5 14" fill="#dfb59a"/>
+ <path d="m51 41 53-1 2 8-54 4Z" fill="#3e606a"/><rect x="94" y="38" width="16" height="11" rx="2" fill="#226b70"/>
+ <path d="m109 44 142 36-25 44z" fill="#85c5bd" fill-opacity=".37" stroke="#599a94" stroke-dasharray="4 4" stroke-width="1"/>
+ <path d="M140 145h202v10H140zM151 155v42m176-42v42" fill="#8ea5a9"/>
+ <path d="M215 118h72v26h-72z" fill="#9db9ba"/><path d="m215 118 55-34 4 5-54 34z" fill="#d4a268"/>
+ <path d="m81 111 51 35 66-26 18-13 9 3-12 13-11 5-66 36q-6 3-17-4l-49-31" fill="#ddb49a"/>
+ <path d="m93 107 54 16 64-27 25-6q8 0 4 5l-20 12-70 31-57-11" fill="#e7c5ac"/>
+ </g></svg>
+<g font-family="sans-serif" fill="#39555e" font-size="17"><text x="25" y="286">观察指尖与盒盖边缘的接触</text><text x="394" y="286">观察手臂、盒子和桌面的空间关系</text></g>
+</svg>

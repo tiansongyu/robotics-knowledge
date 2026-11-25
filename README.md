@@ -6,6 +6,15 @@
 
 内容入口：[docs/index.md](docs/index.md)。建议从学习路线开始，依次阅读基础、材料、工艺、选材与实验。案例参数明确标为教学假设，材料数据附原始来源；内容不替代具体零件的设计与验证。
 
+## 机器人示教与第一人称操作学习
+
+同一仓库另含两套中文 Sphinx 教程。每站有独立的目录、搜索索引、概念图和可执行计算。启动下方预览后可直接进入课程。
+
+| 课程 | 源码 | 本地阅读 |
+| --- | --- | --- |
+| UMI 手持夹爪、轨迹重建与策略执行 | [UMI 目录](tutorials/umi/index.md) | [打开 UMI](http://127.0.0.1:8000/umi/) |
+| Ego4D 手物交互与 Ego-Exo4D 多视角学习 | [Ego 目录](tutorials/ego/index.md) | [打开 Ego](http://127.0.0.1:8000/ego/) |
+
 ## 本地构建
 
 需要 Python 3.10 或更高版本；首次安装与准备渲染资源需要联网。
@@ -15,6 +24,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-docs.txt
 .venv/bin/python scripts/vendor_assets.py
 .venv/bin/python -m sphinx -E -a -W --keep-going -n -D nb_execution_mode=force -b html docs docs/_build/html
+.venv/bin/python scripts/build_tutorials.py
 .venv/bin/python scripts/check_links.py
 .venv/bin/python -m http.server 8000 --bind 127.0.0.1 --directory docs/_build/html
 ```
