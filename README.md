@@ -1,10 +1,8 @@
 # 机器人知识库
 
-中文学习站，围绕机器人零件的选材、制造、连接和验证展开。包含材料学习页面、三类机器人零件案例、电机与三类减速器图解，以及构建时实际执行的质量、挠度和热膨胀计算。
+[在线知识目录](https://tiansongyu.github.io/robotics-knowledge/)按材料、软件、硬件和结构组织已有学习模块。点击模块可直接进入对应文档。阅读页顶部和末尾均可返回知识目录。
 
-在线阅读：https://tiansongyu.github.io/robotics-knowledge/
-
-内容入口：[docs/index.md](docs/index.md)。建议从学习路线开始，依次阅读基础、材料、工艺、选材与实验。案例参数明确标为教学假设，材料数据附原始来源；内容不替代具体零件的设计与验证。
+目录支持按分类与关键词组合筛选。材料课程的学习路线、案例和资料来源见[机器人材料与选材](docs/materials.md)。示教与感知课程也可从下方的独立入口进入。
 
 ## 机器人示教与第一人称操作学习
 
@@ -37,7 +35,7 @@ python3 -m venv .venv
 
 `.github/workflows/pages.yml` 在 main 分支更新后严格构建、强制执行计算、检查本地链接，再部署 GitHub Pages。PR 只构建验证。仓库 Pages 发布方式须设为 GitHub Actions。
 
-正文使用 MyST Markdown。新增页面需登记在 `docs/index.md` 的目录中；引用数据时保留牌号、状态、温湿度、试验方向和资料版本。数据来源见 [docs/sources.md](docs/sources.md)。
+正文使用 MyST Markdown。新增章节时，在所属课程的 `toctree` 中登记。首页模块的分类、标题、摘要和入口统一维护在 [docs/catalog.json](docs/catalog.json)。引用数据时保留牌号、状态、温湿度、试验方向和资料版本。数据来源见 [docs/sources.md](docs/sources.md)。
 
 修改计算假设时同时检查正文解释和断言。构建成功不代表外部链接长期可用或所有材料结论均经过实物试验。
 

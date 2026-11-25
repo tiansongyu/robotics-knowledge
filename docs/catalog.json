@@ -1,0 +1,34 @@
+[
+  {
+    "id": "materials", "title": "材料", "icon": "layers",
+    "modules": [
+      {"title": "机器人材料与选材", "path": "materials.html", "keywords": "铝合金 镁 钢 铸铁 PLA PETG TPU 碳纤维 复材 热处理 晶粒", "summary": "从金属、塑料和复合材料的性能，走到机器人零件的选材案例。"},
+      {"title": "3D 打印与增材制造", "path": "printing.html", "keywords": "增材 3D打印 FFF SLA SLS MJF 层高 螺纹 轴承座", "summary": "比较 FDM、SLA 和 SLS 工艺，理解打印方向、层间强度与装配。"},
+      {"title": "加工、连接与表面处理", "path": "manufacturing.html", "summary": "认识螺栓预紧、胶接、焊接和表面防护对零件性能的影响。"},
+      {"title": "材料计算与实验验证", "path": "calculations.html", "keywords": "弹性模量 比刚度 样件 测试 蠕变 悬臂梁", "summary": "计算质量、挠度与热膨胀，再用样件实验验证设计。"}
+    ]
+  },
+  {
+    "id": "software", "title": "软件", "icon": "code",
+    "modules": [
+      {"title": "UMI 机器人示教", "path": "umi/index.html", "keywords": "SLAM 扩散策略 Diffusion Policy 延迟 位姿 重定位", "summary": "从取杯示教录像重建末端轨迹，理解相对动作表示和策略执行。"},
+      {"title": "Ego 第一人称操作学习", "path": "ego/index.html", "keywords": "视觉 PNR 重投影 三维手姿 预测 关键帧", "summary": "用 Ego4D 和 Ego-Exo4D 学习手物交互标注、多视角几何与动作迁移。"}
+    ]
+  },
+  {
+    "id": "hardware", "title": "硬件", "icon": "chip",
+    "modules": [
+      {"title": "电机本体与驱动原理", "path": "drives.html", "keywords": "无刷 电磁 绕组 永磁 气隙 电机轴", "summary": "从定子、转子和绕组看电机如何产生转矩，再沿输出轴追踪动力。"},
+      {"title": "UMI 夹爪与传感器", "path": "umi/hardware.html", "keywords": "IMU TCP ArUco GoPro 腕部 开度", "summary": "辨认腕部相机、惯性测量单元和夹指，理解开度与工具中心点标定。"}
+    ]
+  },
+  {
+    "id": "structures", "title": "结构", "icon": "structure",
+    "modules": [
+      {"title": "承载与结构力学", "path": "mechanics.html", "summary": "用强度、刚度、弯曲和扭转分析连杆与支架的变形。"},
+      {"title": "行星减速器", "path": "drive-planetary.html", "summary": "沿太阳轮、行星轮和行星架追踪传动，计算转速关系。"},
+      {"title": "谐波减速器", "path": "drive-harmonic.html", "summary": "从波发生器、柔轮与刚轮的啮合，读懂齿数差带来的减速。"},
+      {"title": "摆线针轮减速器", "path": "drive-cycloidal.html", "keywords": "RV 针齿 偏心轴 摆线盘", "summary": "结合剖面与爆炸图理解偏心输入、针齿约束和输出销取力。"}
+    ]
+  }
+]

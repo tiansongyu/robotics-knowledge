@@ -1,4 +1,7 @@
 """Sphinx project documentation configuration."""
+import json
+from pathlib import Path
+
 project = '机器人知识库'
 language = 'zh_CN'
 extensions = ['sphinx_rtd_theme', 'myst_nb', 'sphinxcontrib.mermaid', 'sphinx.ext.mathjax']
@@ -31,3 +34,30 @@ mermaid_init_config = {'startOnLoad': False, 'securityLevel': 'strict', 'theme':
 html_baseurl = 'https://tiansongyu.github.io/robotics-knowledge/'
 mermaid_use_local = 'vendor/mermaid/dist/mermaid.esm.min.mjs'
 mathjax_path = 'vendor/mathjax/es5/tex-mml-chtml.js'
+
+# Shared navigation for the handbook and both independent course builds.
+templates_path = ['_templates']
+DOCS = Path(__file__).resolve().parent
+catalog_groups = json.loads((DOCS / 'catalog.json').read_text(encoding='utf-8'))
+html_context = {'groups': catalog_groups}
+catalog_categories = {
+    module['path']: group['id']
+    for group in catalog_groups for module in group['modules']
+}
+
+
+def catalog_page(app, pagename, templatename, context, doctree):
+    main_site = app.srcdir.resolve() == DOCS
+    if main_site and pagename == 'index':
+        return 'catalog.html'
+
+    prefix = '' if main_site else app.srcdir.name + '/'
+    module_path = f'{prefix}{pagename}.html'
+    fallback = 'materials' if main_site else 'software'
+    category = catalog_categories.get(module_path, fallback)
+    root_index = 'index.html' if main_site else '../index.html'
+    context['catalog_return'] = context['pathto'](root_index, 1) + '#' + category
+
+
+def setup(app):
+    app.connect('html-page-context', catalog_page)

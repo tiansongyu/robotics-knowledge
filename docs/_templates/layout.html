@@ -1,0 +1,13 @@
+{% extends "!layout.html" %}
+{% block content %}
+  <nav class="catalog-return" aria-label="学习导航">
+    <a href="{{ catalog_return }}" title="退出当前学习模块"><span aria-hidden="true">←</span> 返回知识目录</a>
+  </nav>
+  {{ super() }}
+{% endblock %}
+{% block document %}
+  {{ super() }}
+  <nav class="catalog-return" aria-label="学习结束导航">
+    <a href="{{ catalog_return }}"><span aria-hidden="true">←</span> 退出学习，返回目录</a>
+  </nav>
+{% endblock %}

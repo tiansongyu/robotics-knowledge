@@ -1,0 +1,88 @@
+{% macro icon(name, size=20) -%}
+<svg class="icon" width="{{ size }}" height="{{ size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-{{ name }}"></use></svg>
+{%- endmacro %}
+{% set total = groups|map(attribute='modules')|map('length')|sum %}
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按材料、软件、硬件和结构浏览机器人工程学习模块，查阅课程、图解与计算实验。">
+  <title>知识模块目录 · 机器人知识库</title>
+  {% if pageurl %}<link rel="canonical" href="{{ pageurl|e }}">{% endif %}
+  <link rel="stylesheet" href="{{ pathto('_static/catalog/catalog.css', 1) }}">
+  <script defer src="{{ pathto('_static/catalog/catalog.js', 1) }}"></script>
+</head>
+<body>
+  <svg class="symbol-bank" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="m3 4 8 2.5v14L3 18zM21 4l-8 2.5v14l8-2.5z"/><path d="m6 8 2 .7m8-.1 2-.7"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m3 8 9-5 9 5-9 5zM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m7.5 7-5 5 5 5m9-10 5 5-5 5m-3-14-3 18"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="5.5" y="5.5" width="13" height="13" rx="2"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/><rect x="9" y="9" width="6" height="6" rx=".8"/></symbol>
+    <symbol id="i-structure" viewBox="0 0 24 24"><path d="m3 7 9-5 9 5v10l-9 5-9-5zm0 0 9 5 9-5m-9 5v10"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-clear" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </svg>
+  <a class="skip" href="#directory">跳到学习模块</a>
+  <header class="mast" id="top">
+    <div class="wrap bar">
+      <a class="brand" href="{{ pathto('index.html', 1) }}"><span class="brand-mark">{{ icon('book', 24) }}</span>机器人知识库</a>
+      <nav class="top-links" aria-label="主导航">
+        <a href="#directory" class="here">知识目录</a>
+        <a href="https://github.com/tiansongyu/robotics-knowledge">GitHub {{ icon('external', 15) }}</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="cover" aria-labelledby="cover-title">
+      <div class="wrap cover-inner">
+        <div class="cover-copy">
+          <h1 id="cover-title">机器人工程<br><span>学习目录</span></h1>
+          <p>从零件选材、驱动与传动结构，到机器人示教与第一人称感知。</p>
+          <a class="browse" href="#directory">浏览知识模块 {{ icon('down', 17) }}</a>
+        </div>
+        <div class="cover-art">
+          <img src="{{ pathto('_static/catalog/robot-arm.webp', 1) }}" width="1040" height="693" alt="橙色工业机械臂的工程手册插画">
+        </div>
+      </div>
+    </section>
+    <div id="directory" class="wrap directory" tabindex="-1">
+      <aside class="framework">
+        <h2>知识分类</h2>
+        <nav class="filters" aria-label="按知识分类">
+          <a class="filter" href="#directory" data-group="all" aria-current="true">{{ icon('grid') }}<span>全部模块</span><small>{{ total }}</small></a>
+          {% for group in groups %}
+          <a class="filter" href="#{{ group.id }}" data-group="{{ group.id }}">{{ icon(group.icon) }}<span>{{ group.title }}</span><small>{{ group.modules|length }}</small></a>
+          {% endfor %}
+        </nav>
+      </aside>
+      <div class="results">
+        <div class="tools">
+          <div class="results-title"><h2>学习模块</h2><span id="result-count" role="status" aria-live="polite">{{ total }} 个模块</span></div>
+          <div class="search" id="module-search" role="search" hidden>
+            {{ icon('search', 18) }}
+            <input type="search" id="query" aria-label="搜索模块名称或主题" placeholder="搜索模块名称或主题" autocomplete="off">
+            <button type="button" id="clear-query" aria-label="清除搜索" hidden>{{ icon('clear', 15) }}</button>
+          </div>
+        </div>
+        {% for group in groups %}
+        <section class="group" id="{{ group.id }}" aria-labelledby="heading-{{ group.id }}">
+          <div class="group-head"><span class="subject-icon">{{ icon(group.icon, 20) }}</span><h3 id="heading-{{ group.id }}">{{ group.title }}知识</h3></div>
+          <ul class="modules">
+            {% for module in group.modules %}
+            <li data-keywords="{{ module.keywords|default('') }}"><a class="module" href="{{ module.path }}"><span class="module-copy"><strong>{{ module.title }}</strong><span>{{ module.summary }}</span></span>{{ icon('arrow', 19) }}</a></li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endfor %}
+        <div class="empty" id="empty" hidden><p>没有找到匹配的模块</p><button id="reset" type="button">查看全部模块</button></div>
+      </div>
+    </div>
+  </main>
+  <footer><div class="wrap"><span>机器人知识库</span><a href="#top">回到页首 ↑</a></div></footer>
+</body>
+</html>
