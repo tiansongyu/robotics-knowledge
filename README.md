@@ -13,6 +13,10 @@
 | UMI 手持夹爪、轨迹重建与策略执行 | [UMI 目录](tutorials/umi/index.md) | [打开 UMI](http://127.0.0.1:8000/umi/) |
 | Ego4D 手物交互与 Ego-Exo4D 多视角学习 | [Ego 目录](tutorials/ego/index.md) | [打开 Ego](http://127.0.0.1:8000/ego/) |
 
+## NVIDIA CPU 系统软件面试手册
+
+手册包含八章，涵盖 C/C++、Linux 内核、Arm 与 SoC、驱动、诊断和项目面试。诊断章附可下载的 C11 练习。[在线阅读](https://tiansongyu.github.io/robotics-knowledge/nvidia-cpu-interview/) · [源码与独立构建说明](nvidia-cpu-interview/)
+
 ## 本地构建
 
 需要 Python 3.10 或更高版本；首次安装与准备渲染资源需要联网。

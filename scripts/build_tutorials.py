@@ -1,4 +1,4 @@
-"""Build the two independent Sphinx courses alongside the main site."""
+"""Build the independent Sphinx courses alongside the main site."""
 import argparse
 from pathlib import Path
 import subprocess
@@ -21,3 +21,16 @@ if __name__ == "__main__":
             "-d", str(ROOT / "docs/_build/doctrees" / slug),
             str(ROOT / "tutorials" / slug), str(args.output / slug),
         ], check=True)
+
+    # Use the handbook's own theme and Chinese search implementation.
+    slug = "nvidia-cpu-interview"
+    subprocess.run([
+        sys.executable, "-m", "sphinx", "-E", "-a", "-W", "--keep-going", "-n", "-b", "html",
+        "-D", f"templates_path={ROOT / 'docs/_templates'}",
+        "-D", f"html_static_path={ROOT / 'docs/_static/custom.css'}",
+        "-D", "html_css_files=custom.css",
+        "-D", f"html_baseurl=https://tiansongyu.github.io/robotics-knowledge/{slug}/",
+        "-A", "catalog_return=../index.html#software",
+        "-d", str(ROOT / "docs/_build/doctrees" / slug),
+        str(ROOT / slug / "docs"), str(args.output / slug),
+    ], check=True)

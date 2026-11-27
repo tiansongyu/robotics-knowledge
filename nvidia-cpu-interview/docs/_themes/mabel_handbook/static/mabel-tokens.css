@@ -1,0 +1,15 @@
+:root {
+  --mabel-ink: #192328;
+  --mabel-night: #202d32;
+  --mabel-gold: #f3c866;
+  --mabel-brass: #d9a13f;
+  --mabel-bone: #f4ead2;
+  --mabel-paper: #faf6ea;
+  --mabel-panel: #fffdf6;
+  --mabel-rule: #c7bfae;
+  --mabel-muted: #565d59;
+  --mabel-rust: #903c22;
+  --mabel-blue: #23577e;
+  --mabel-text: Jost, "Source Sans 3", "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mabel-mono: "Space Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}

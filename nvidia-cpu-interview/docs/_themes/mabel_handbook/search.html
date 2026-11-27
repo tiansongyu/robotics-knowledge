@@ -1,0 +1,13 @@
+{% extends "sphinx_rtd_theme/search.html" %}
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ pathto('_static/chinese-query.js', 1) }}"></script>
+{% endblock %}
+{% block body %}
+  <h1>{{ _('Search') }}</h1>
+  <form class="mabel-search-form" action="{{ pathto('search') }}" method="get" role="search">
+    <input type="search" name="q" aria-label="{{ _('Search docs') }}" placeholder="{{ _('Search docs') }}">
+    <button type="submit">{{ _('Search') }}</button>
+  </form>
+  {{ super() }}
+{% endblock %}

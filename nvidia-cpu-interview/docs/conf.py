@@ -1,0 +1,9 @@
+project = 'NVIDIA CPU 系统软件面试手册'
+language = 'zh_CN'
+extensions = ['sphinx_rtd_theme']
+html_theme_path = ['_themes']
+html_theme = 'mabel_handbook'
+html_theme_options = {'navigation_depth': 3, 'collapse_navigation': False}
+html_show_copyright = False
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+nitpicky = True

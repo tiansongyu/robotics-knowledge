@@ -12,7 +12,8 @@
     "id": "software", "title": "软件", "icon": "code",
     "modules": [
       {"title": "UMI 机器人示教", "path": "umi/index.html", "keywords": "SLAM 扩散策略 Diffusion Policy 延迟 位姿 重定位", "summary": "从取杯示教录像重建末端轨迹，理解相对动作表示和策略执行。"},
-      {"title": "Ego 第一人称操作学习", "path": "ego/index.html", "keywords": "视觉 PNR 重投影 三维手姿 预测 关键帧", "summary": "用 Ego4D 和 Ego-Exo4D 学习手物交互标注、多视角几何与动作迁移。"}
+      {"title": "Ego 第一人称操作学习", "path": "ego/index.html", "keywords": "视觉 PNR 重投影 三维手姿 预测 关键帧", "summary": "用 Ego4D 和 Ego-Exo4D 学习手物交互标注、多视角几何与动作迁移。"},
+      {"title": "NVIDIA CPU 系统软件面试手册", "path": "nvidia-cpu-interview/index.html", "keywords": "NVIDIA CPU Arm SoC Linux C/C++ Tegra Vera 驱动 诊断 面试", "summary": "练习驱动与内核编程，用 C11 示例验证设备完成事件，准备讲解一次系统故障的定位过程。"}
     ]
   },
   {
